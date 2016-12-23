@@ -12,9 +12,29 @@
     tools:context=".example.MainActivity"
     tools:ignore="HardcodedText">
 
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        tools:ignore="UseCompoundDrawables">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="This tag and its children can be replaced by one &lt;TextView/&gt; and a compound drawable" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:contentDescription="@null"
+            android:src="@drawable/ic_launcher" />
+    </LinearLayout>
+
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/space_medium"
         android:drawableEnd="@drawable/ic_launcher"
         android:drawableRight="@drawable/ic_launcher"
         android:text="TextView: Just right drawable!" />

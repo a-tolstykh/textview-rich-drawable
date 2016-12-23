@@ -1,5 +1,11 @@
 apply plugin: 'com.android.library'
 
+ext {
+    PUBLISH_GROUP_ID = 'com.tolstykh.textviewrichdrawable'
+    PUBLISH_ARTIFACT_ID = 'textview-rich-drawable'
+    PUBLISH_VERSION = '0.1.0'
+}
+
 android {
     compileSdkVersion 25
     buildToolsVersion "24.0.3"
@@ -8,7 +14,7 @@ android {
         minSdkVersion 9
         targetSdkVersion 25
         versionCode 1
-        versionName "0.1"
+        versionName "$PUBLISH_VERSION"
     }
     buildTypes {
         release {
@@ -23,3 +29,6 @@ dependencies {
     testCompile 'junit:junit:4.12'
     compile 'com.android.support:appcompat-v7:25.0.0'
 }
+
+// to generate release build use './gradlew clean build generateRelease'
+apply from: 'https://raw.githubusercontent.com/blundell/release-android-library/master/android-release-aar.gradle'
