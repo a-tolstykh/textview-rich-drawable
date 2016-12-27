@@ -7,12 +7,12 @@ ext {
 }
 
 android {
-    compileSdkVersion 25
-    buildToolsVersion "24.0.3"
+    compileSdkVersion rootProject.compileSdkVersion
+    buildToolsVersion rootProject.buildToolsVersion
 
     defaultConfig {
-        minSdkVersion 9
-        targetSdkVersion 25
+        minSdkVersion rootProject.minSdkVersion
+        targetSdkVersion rootProject.targetSdkVersion
         versionCode 1
         versionName "$PUBLISH_VERSION"
     }
@@ -25,9 +25,7 @@ android {
 }
 
 dependencies {
-    compile fileTree(dir: 'libs', include: ['*.jar'])
-    testCompile 'junit:junit:4.12'
-    compile 'com.android.support:appcompat-v7:25.0.0'
+    compile "com.android.support:appcompat-v7:$rootProject.supportVersion"
 }
 
 // to generate release build use './gradlew clean build generateRelease'
