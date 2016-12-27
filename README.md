@@ -45,7 +45,7 @@ repositories {
 ```
 
 ```groovy
-compile 'com.tolstykh.textviewrichdrawable:textview-rich-drawable:0.1.0'
+compile 'com.tolstykh.textviewrichdrawable:textview-rich-drawable:0.2.0'
 ```
 
 ## License

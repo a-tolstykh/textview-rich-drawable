@@ -25,5 +25,5 @@ android {
 
 dependencies {
     compile "com.android.support:appcompat-v7:$rootProject.supportVersion"
-    compile 'com.tolstykh.textviewrichdrawable:textview-rich-drawable:0.1.0'
+    compile 'com.tolstykh.textviewrichdrawable:textview-rich-drawable:0.2.0'
 }
