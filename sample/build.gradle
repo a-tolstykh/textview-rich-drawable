@@ -1,7 +1,5 @@
 repositories {
-    maven {
-        url 'https://dl.bintray.com/tolstykh/rich-compound-drawable/'
-    }
+    jcenter()
 }
 
 apply plugin: 'com.android.application'

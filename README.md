@@ -40,9 +40,7 @@ This library is just an extension of Android's TextView.
 
 ```groovy
 repositories {
-    maven {
-        url 'https://dl.bintray.com/tolstykh/rich-compound-drawable/'
-    }
+    jcenter()
 }
 ```
 
