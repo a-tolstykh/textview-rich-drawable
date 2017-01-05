@@ -1,4 +1,4 @@
-# TextViewRichDrawable
+# TextViewRichDrawable [![Android Arsenal](https://img.shields.io/badge/Android%20Arsenal-TextViewRichDrawable-brightgreen.svg?style=flat)](https://android-arsenal.com/details/1/5002)
 
 This is a tiny library which empowers TextView's compound drawables with size specifying and vector support.
 
