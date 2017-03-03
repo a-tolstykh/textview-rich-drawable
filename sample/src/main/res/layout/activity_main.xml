@@ -64,4 +64,12 @@
         app:compoundDrawableHeight="24dp"
         app:compoundDrawableWidth="24dp"
         app:drawableEndVector="@drawable/ic_arrow_drop_down_circle_black_32dp" />
+
+    <com.tolstykh.textviewrichdrawable.TextViewRichDrawable
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/space_medium"
+        android:text="TextViewRichDrawable: VECTOR WITH TINT\ndrawableStartVector"
+        app:drawableStartVector="@drawable/ic_android_black_24dp"
+        app:drawableTint="@color/colorAccent" />
 </LinearLayout>

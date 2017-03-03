@@ -4,9 +4,11 @@ import android.content.Context;
 import android.content.res.TypedArray;
 import android.graphics.Rect;
 import android.graphics.drawable.Drawable;
+import android.support.annotation.ColorInt;
 import android.support.annotation.DrawableRes;
+import android.support.graphics.drawable.VectorDrawableCompat;
+import android.support.v4.graphics.drawable.DrawableCompat;
 import android.support.v4.view.ViewCompat;
-import android.support.v7.widget.AppCompatDrawableManager;
 import android.support.v7.widget.AppCompatTextView;
 import android.util.AttributeSet;
 
@@ -23,6 +25,9 @@ public class TextViewRichDrawable extends AppCompatTextView {
 
     private int mDrawableWidth;
     private int mDrawableHeight;
+
+    @ColorInt
+    private int mDrawableTint;
 
     public TextViewRichDrawable(Context context) {
         super(context);
@@ -53,6 +58,7 @@ public class TextViewRichDrawable extends AppCompatTextView {
             drawableTopVectorId = array.getResourceId(R.styleable.TextViewRichDrawable_drawableTopVector, UNDEFINED);
             drawableEndVectorId = array.getResourceId(R.styleable.TextViewRichDrawable_drawableEndVector, UNDEFINED);
             drawableBottomVectorId = array.getResourceId(R.styleable.TextViewRichDrawable_drawableBottomVector, UNDEFINED);
+            mDrawableTint = array.getColor(R.styleable.TextViewRichDrawable_drawableTint, UNDEFINED);
         } finally {
             array.recycle();
         }
@@ -124,6 +130,20 @@ public class TextViewRichDrawable extends AppCompatTextView {
                 drawable.setBounds(new Rect(0, 0, drawable.getIntrinsicWidth(), drawable.getIntrinsicHeight()));
             }
         }
+
+        if (mDrawableTint != UNDEFINED) {
+            for (int i = 0; i < drawables.length; i++) {
+                if (drawables[i] == null) {
+                    continue;
+                }
+
+                Drawable tintedDrawable = DrawableCompat.wrap(drawables[i]);
+                DrawableCompat.setTint(tintedDrawable.mutate(), mDrawableTint);
+
+                drawables[i] = tintedDrawable;
+            }
+        }
+
         setCompoundDrawables(drawables[LEFT_DRAWABLE_INDEX], drawables[TOP_DRAWABLE_INDEX],
                 drawables[RIGHT_DRAWABLE_INDEX], drawables[BOTTOM_DRAWABLE_INDEX]);
     }
@@ -136,7 +156,7 @@ public class TextViewRichDrawable extends AppCompatTextView {
         return mDrawableWidth;
     }
 
-    private Drawable getVectorDrawable(@DrawableRes int resId) {
-        return AppCompatDrawableManager.get().getDrawable(getContext(), resId);
+    private VectorDrawableCompat getVectorDrawable(@DrawableRes int resId) {
+        return VectorDrawableCompat.create(getResources(), resId, getContext().getTheme());
     }
 }
