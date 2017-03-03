@@ -57,7 +57,8 @@ public class TextViewRichDrawable extends AppCompatTextView {
             array.recycle();
         }
 
-        if (mDrawableWidth > 0 || mDrawableHeight > 0 || drawableEndVectorId > 0) {
+        if (mDrawableWidth > 0 || mDrawableHeight > 0 || drawableStartVectorId > 0 || drawableTopVectorId > 0
+                || drawableEndVectorId > 0 || drawableBottomVectorId > 0) {
             initCompoundDrawables(drawableStartVectorId, drawableTopVectorId, drawableEndVectorId, drawableBottomVectorId);
         }
     }
@@ -72,13 +73,13 @@ public class TextViewRichDrawable extends AppCompatTextView {
             drawables[rtl ? RIGHT_DRAWABLE_INDEX : LEFT_DRAWABLE_INDEX] = getVectorDrawable(drawableStartVectorId);
         }
         if (drawableTopVectorId != UNDEFINED) {
-            drawables[RIGHT_DRAWABLE_INDEX] = getVectorDrawable(drawableTopVectorId);
+            drawables[TOP_DRAWABLE_INDEX] = getVectorDrawable(drawableTopVectorId);
         }
         if (drawableEndVectorId != UNDEFINED) {
             drawables[rtl ? LEFT_DRAWABLE_INDEX : RIGHT_DRAWABLE_INDEX] = getVectorDrawable(drawableEndVectorId);
         }
         if (drawableBottomVectorId != UNDEFINED) {
-            drawables[RIGHT_DRAWABLE_INDEX] = getVectorDrawable(drawableBottomVectorId);
+            drawables[BOTTOM_DRAWABLE_INDEX] = getVectorDrawable(drawableBottomVectorId);
         }
 
         if (mDrawableHeight > 0 || mDrawableWidth > 0) {
