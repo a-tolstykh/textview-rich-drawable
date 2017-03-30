@@ -1,6 +1,6 @@
 # TextViewRichDrawable [![Android Arsenal](https://img.shields.io/badge/Android%20Arsenal-TextViewRichDrawable-brightgreen.svg?style=flat)](https://android-arsenal.com/details/1/5002)
 
-This is a tiny library which empowers TextView's compound drawables with size specifying and vector support.
+This is a tiny library which empowers TextView's compound drawables with size specifying, vector support and tinting.
 
 This library is just an extension of Android's TextView.
 
@@ -16,7 +16,8 @@ This library is just an extension of Android's TextView.
         app:compoundDrawableHeight="24dp"
         app:compoundDrawableWidth="24dp"
         app:drawableTopVector="@drawable/some_vector_drawble"
-        app:drawableEndVector="@drawable/another_vector_drawable" />
+        app:drawableEndVector="@drawable/another_vector_drawable"
+        app:drawableTint="@color/colorAccent" />
 ```        
 
 * All customizable attributes:
@@ -29,6 +30,7 @@ This library is just an extension of Android's TextView.
         <attr name="drawableTopVector" format="reference" />
         <attr name="drawableEndVector" format="reference" />
         <attr name="drawableBottomVector" format="reference" />
+        <attr name="drawableTint" format="reference" />
     </declare-styleable>
 ```
 
