@@ -6,6 +6,16 @@ This library is just an extension of Android's TextView.
 
 ## Usage
 
+* Enable vector Drawable support for pre Lollipop devices ([more details](https://developer.android.com/guide/topics/graphics/vector-drawable-resources.html#vector-drawables-backward-solution)): 
+
+```groovy
+ android {
+   defaultConfig {
+     vectorDrawables.useSupportLibrary = true
+    }
+ }
+```
+
 * In XML layout: 
 
 ```xml
