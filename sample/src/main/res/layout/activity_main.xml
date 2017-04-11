@@ -45,7 +45,7 @@
         android:layout_marginTop="@dimen/space_medium"
         android:drawableLeft="@drawable/ic_apply"
         android:drawableStart="@drawable/ic_apply"
-        android:text="TextViewRichDrawable: WITH SIZE\ndrawableRight[48dp;48dp]"
+        android:text="TextViewRichDrawable: WITH SIZE\ndrawableStart[48dp;48dp]"
         app:compoundDrawableHeight="48dp"
         app:compoundDrawableWidth="48dp" />
 
