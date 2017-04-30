@@ -52,8 +52,8 @@ public class TextViewRichDrawable extends AppCompatTextView {
         int drawableEndVectorId;
         int drawableBottomVectorId;
         try {
-            mDrawableWidth = array.getDimensionPixelSize(R.styleable.TextViewRichDrawable_compoundDrawableWidth, -1);
-            mDrawableHeight = array.getDimensionPixelSize(R.styleable.TextViewRichDrawable_compoundDrawableHeight, -1);
+            mDrawableWidth = array.getDimensionPixelSize(R.styleable.TextViewRichDrawable_compoundDrawableWidth, UNDEFINED);
+            mDrawableHeight = array.getDimensionPixelSize(R.styleable.TextViewRichDrawable_compoundDrawableHeight, UNDEFINED);
             drawableStartVectorId = array.getResourceId(R.styleable.TextViewRichDrawable_drawableStartVector, UNDEFINED);
             drawableTopVectorId = array.getResourceId(R.styleable.TextViewRichDrawable_drawableTopVector, UNDEFINED);
             drawableEndVectorId = array.getResourceId(R.styleable.TextViewRichDrawable_drawableEndVector, UNDEFINED);
@@ -148,10 +148,20 @@ public class TextViewRichDrawable extends AppCompatTextView {
                 drawables[RIGHT_DRAWABLE_INDEX], drawables[BOTTOM_DRAWABLE_INDEX]);
     }
 
+    /**
+     * Returns the compound drawable height of this view.
+     *
+     * @return the height in pixels or {@value UNDEFINED} if undefined.
+     */
     public int getCompoundDrawableHeight() {
         return mDrawableHeight;
     }
 
+    /**
+     * Returns the compound drawable width of this view.
+     *
+     * @return the width in pixels or {@value UNDEFINED} if undefined.
+     */
     public int getCompoundDrawableWidth() {
         return mDrawableWidth;
     }
