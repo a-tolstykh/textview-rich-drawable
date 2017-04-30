@@ -1,4 +1,4 @@
-package com.tolstykh.textviewrichdrawable;
+package com.tolstykh.textviewrichdrawable.helper;
 
 import android.content.Context;
 import android.content.res.Resources;
@@ -15,6 +15,7 @@ import android.util.AttributeSet;
 import android.widget.TextView;
 
 import com.tolstykh.library.R;
+import com.tolstykh.textviewrichdrawable.DrawableEnriched;
 
 public class RichDrawableHelper implements DrawableEnriched {
 

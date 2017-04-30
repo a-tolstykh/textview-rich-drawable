@@ -4,6 +4,8 @@ import android.content.Context;
 import android.support.v7.widget.AppCompatTextView;
 import android.util.AttributeSet;
 
+import com.tolstykh.textviewrichdrawable.helper.RichDrawableHelper;
+
 public class TextViewRichDrawable extends AppCompatTextView implements DrawableEnriched {
 
     private RichDrawableHelper mRichDrawableHelper;
