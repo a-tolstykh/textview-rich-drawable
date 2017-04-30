@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".example.MainActivity"
+    tools:ignore="HardcodedText">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingBottom="@dimen/activity_vertical_margin"
+        android:paddingLeft="@dimen/activity_horizontal_margin"
+        android:paddingRight="@dimen/activity_horizontal_margin"
+        android:paddingTop="@dimen/activity_vertical_margin">
+
+        <com.tolstykh.textviewrichdrawable.TextViewRichDrawable
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/space_medium"
+            android:text="TextViewRichDrawable: VECTOR WITH TINT\ndrawableStartVector"
+            app:drawableEndVector="@drawable/ic_android_black_24dp"
+            app:drawableTint="@color/colorAccent"/>
+
+        <com.tolstykh.textviewrichdrawable.ButtonRichDrawable
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/space_medium"
+            android:text="Button"
+            app:drawableEndVector="@drawable/ic_android_black_24dp"
+            app:drawableTint="@color/colorAccent"/>
+
+        <com.tolstykh.textviewrichdrawable.CheckBoxRichDrawable
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/space_medium"
+            android:text="CheckBox"
+            app:drawableEndVector="@drawable/ic_android_black_24dp"
+            app:drawableTint="@color/colorAccent"/>
+
+        <com.tolstykh.textviewrichdrawable.EditTextRichDrawable
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/space_medium"
+            android:hint="EditText"
+            app:drawableEndVector="@drawable/ic_android_black_24dp"
+            app:drawableTint="@color/colorAccent"/>
+
+        <RadioGroup
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <com.tolstykh.textviewrichdrawable.RadioButtonRichDrawable
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/space_medium"
+                android:text="RadioButton #1"
+                app:drawableEndVector="@drawable/ic_android_black_24dp"
+                app:drawableTint="@color/colorAccent"/>
+
+            <com.tolstykh.textviewrichdrawable.RadioButtonRichDrawable
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/space_medium"
+                android:text="RadioButton #2"
+                app:drawableEndVector="@drawable/ic_android_black_24dp"
+                app:drawableTint="@color/colorAccent"/>
+        </RadioGroup>
+    </LinearLayout>
+</ScrollView>

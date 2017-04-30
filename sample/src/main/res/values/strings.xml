@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">TextViewRichDrawable</string>
+    <string name="title_text_views_demo">TextView</string>
+    <string name="title_all_controls_demo">All controls</string>
 </resources>
