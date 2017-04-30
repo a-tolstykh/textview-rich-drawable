@@ -1,6 +1,12 @@
 # TextViewRichDrawable [![Android Arsenal](https://img.shields.io/badge/Android%20Arsenal-TextViewRichDrawable-brightgreen.svg?style=flat)](https://android-arsenal.com/details/1/5002)
 
-This is a tiny library which empowers TextView's compound drawables with size specifying, vector support and tinting.
+This is a tiny library which empowers TextView's (and its inheritors) compound drawables with size specifying, vector support and tinting. Currently empowers next Android views with RichDrawable support:
+
+ * **Button** -> ButtonRichDrawable
+ * **CheckBox** -> CheckBoxRichDrawable
+ * **EditText** -> EditTextRichDrawable
+ * **RadioButton** -> RadioButtonRichDrawable
+ * **TextView** -> TextViewRichDrawable
 
 This library is just an extension of Android's TextView.
 
@@ -57,7 +63,7 @@ repositories {
 ```
 
 ```groovy
-compile 'com.tolstykh.textviewrichdrawable:textview-rich-drawable:0.2.1'
+compile 'com.tolstykh.textviewrichdrawable:textview-rich-drawable:0.3.0'
 ```
 
 ## License
