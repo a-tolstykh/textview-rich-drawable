@@ -12,7 +12,6 @@ import android.support.graphics.drawable.VectorDrawableCompat;
 import android.support.v4.graphics.drawable.DrawableCompat;
 import android.support.v4.view.ViewCompat;
 import android.util.AttributeSet;
-import android.util.Log;
 import android.widget.TextView;
 
 import com.tolstykh.library.R;
@@ -65,6 +64,16 @@ public class RichDrawableHelper implements DrawableEnriched {
                                        int drawableEndVectorId, int drawableBottomVectorId) {
         Drawable[] drawables = mView.getCompoundDrawables();
 
+        inflateVectors(drawableStartVectorId, drawableTopVectorId, drawableEndVectorId, 
+                drawableBottomVectorId, drawables);
+        scale(drawables);
+        tint(drawables);
+
+        mView.setCompoundDrawables(drawables[LEFT_DRAWABLE_INDEX], drawables[TOP_DRAWABLE_INDEX],
+                drawables[RIGHT_DRAWABLE_INDEX], drawables[BOTTOM_DRAWABLE_INDEX]);
+    }
+
+    private void inflateVectors(int drawableStartVectorId, int drawableTopVectorId, int drawableEndVectorId, int drawableBottomVectorId, Drawable[] drawables) {
         boolean rtl = ViewCompat.getLayoutDirection(mView) == ViewCompat.LAYOUT_DIRECTION_RTL;
 
         if (drawableStartVectorId != UNDEFINED) {
@@ -79,7 +88,9 @@ public class RichDrawableHelper implements DrawableEnriched {
         if (drawableBottomVectorId != UNDEFINED) {
             drawables[BOTTOM_DRAWABLE_INDEX] = getVectorDrawable(drawableBottomVectorId);
         }
+    }
 
+    private void scale(Drawable[] drawables) {
         if (mDrawableHeight > 0 || mDrawableWidth > 0) {
             for (Drawable drawable : drawables) {
                 if (drawable == null) {
@@ -123,7 +134,9 @@ public class RichDrawableHelper implements DrawableEnriched {
                 drawable.setBounds(new Rect(0, 0, drawable.getIntrinsicWidth(), drawable.getIntrinsicHeight()));
             }
         }
+    }
 
+    private void tint(Drawable[] drawables) {
         if (mDrawableTint != UNDEFINED) {
             for (int i = 0; i < drawables.length; i++) {
                 if (drawables[i] == null) {
@@ -136,9 +149,6 @@ public class RichDrawableHelper implements DrawableEnriched {
                 drawables[i] = tintedDrawable;
             }
         }
-
-        mView.setCompoundDrawables(drawables[LEFT_DRAWABLE_INDEX], drawables[TOP_DRAWABLE_INDEX],
-                drawables[RIGHT_DRAWABLE_INDEX], drawables[BOTTOM_DRAWABLE_INDEX]);
     }
 
     private Resources getResources() {
