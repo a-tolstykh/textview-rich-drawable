@@ -12,6 +12,7 @@ import android.support.graphics.drawable.VectorDrawableCompat;
 import android.support.v4.graphics.drawable.DrawableCompat;
 import android.support.v4.view.ViewCompat;
 import android.util.AttributeSet;
+import android.util.Log;
 import android.widget.TextView;
 
 import com.tolstykh.library.R;
@@ -86,29 +87,30 @@ public class RichDrawableHelper implements DrawableEnriched {
                 }
 
                 Rect realBounds = new Rect(0, 0, drawable.getIntrinsicWidth(), drawable.getIntrinsicHeight());
-                float scaleFactor = realBounds.height() / (float) realBounds.width();
+                float actualDrawableWidth = realBounds.width();
+                float actualDrawableHeight = realBounds.height();
+                float actualDrawableRatio = actualDrawableHeight / actualDrawableWidth;
 
-                float drawableWidth = realBounds.width();
-                float drawableHeight = realBounds.height();
-
-                if (mDrawableWidth > 0) {
-                    // save scale factor of image
-                    if (drawableWidth > mDrawableWidth) {
-                        drawableWidth = mDrawableWidth;
-                        drawableHeight = drawableWidth * scaleFactor;
+                float scale;
+                // check if both width and height defined then adjust drawable size according to the ratio
+                if (mDrawableHeight > 0 && mDrawableWidth > 0) {
+                    float placeholderRatio = mDrawableHeight / (float) mDrawableWidth;
+                    if (placeholderRatio > actualDrawableRatio) {
+                        scale = mDrawableWidth / actualDrawableWidth;
+                    } else {
+                        scale = mDrawableHeight / actualDrawableHeight;
                     }
-                }
-                if (mDrawableHeight > 0) {
-                    // save scale factor of image
-
-                    if (drawableHeight > mDrawableHeight) {
-                        drawableHeight = mDrawableHeight;
-                        drawableWidth = drawableHeight / scaleFactor;
-                    }
+                } else if (mDrawableHeight > 0) { // only height defined
+                    scale = mDrawableHeight / actualDrawableHeight;
+                } else { // only width defined
+                    scale = mDrawableWidth / actualDrawableWidth;
                 }
 
-                realBounds.right = realBounds.left + Math.round(drawableWidth);
-                realBounds.bottom = realBounds.top + Math.round(drawableHeight);
+                actualDrawableWidth = actualDrawableWidth * scale;
+                actualDrawableHeight = actualDrawableHeight * scale;
+
+                realBounds.right = realBounds.left + Math.round(actualDrawableWidth);
+                realBounds.bottom = realBounds.top + Math.round(actualDrawableHeight);
 
                 drawable.setBounds(realBounds);
             }
