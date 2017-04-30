@@ -12,21 +12,22 @@ public class TextViewRichDrawable extends AppCompatTextView implements DrawableE
 
     public TextViewRichDrawable(Context context) {
         super(context);
-        init(null, 0, 0);
+        init(context, null, 0, 0);
     }
 
     public TextViewRichDrawable(Context context, AttributeSet attrs) {
         super(context, attrs);
-        init(attrs, 0, 0);
+        init(context, attrs, 0, 0);
     }
 
     public TextViewRichDrawable(Context context, AttributeSet attrs, int defStyleAttr) {
         super(context, attrs, defStyleAttr);
-        init(attrs, defStyleAttr, 0);
+        init(context, attrs, defStyleAttr, 0);
     }
 
-    private void init(AttributeSet attrs, int defStyleAttr, int defStyleRes) {
-        mRichDrawableHelper = new RichDrawableHelper(this, attrs, defStyleAttr, defStyleRes);
+    private void init(Context context, AttributeSet attrs, int defStyleAttr, int defStyleRes) {
+        mRichDrawableHelper = new RichDrawableHelper(context, attrs, defStyleAttr, defStyleRes);
+        mRichDrawableHelper.apply(this);
     }
 
     /**
