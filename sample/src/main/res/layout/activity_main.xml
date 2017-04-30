@@ -28,42 +28,42 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:contentDescription="@null"
-            android:src="@drawable/ic_launcher" />
+            android:src="@drawable/ic_android"/>
     </LinearLayout>
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="@dimen/space_medium"
-        android:drawableEnd="@drawable/ic_launcher"
-        android:drawableRight="@drawable/ic_launcher"
+        android:drawableEnd="@drawable/ic_android"
+        android:drawableRight="@drawable/ic_android"
         android:text="TextView: Just right drawable!" />
 
     <com.tolstykh.textviewrichdrawable.TextViewRichDrawable
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="@dimen/space_medium"
-        android:drawableLeft="@drawable/ic_apply"
-        android:drawableStart="@drawable/ic_apply"
-        android:text="TextViewRichDrawable: WITH SIZE\ndrawableStart[48dp;48dp]"
-        app:compoundDrawableHeight="48dp"
-        app:compoundDrawableWidth="48dp" />
+        android:drawableRight="@drawable/ic_android"
+        android:drawableEnd="@drawable/ic_android"
+        android:text="TextViewRichDrawable: WITH SIZE\ndrawableStart[36dp;36dp]"
+        app:compoundDrawableHeight="36dp"
+        app:compoundDrawableWidth="36dp" />
 
     <com.tolstykh.textviewrichdrawable.TextViewRichDrawable
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="@dimen/space_medium"
-        android:text="TextViewRichDrawable: VECTOR WITHOUT SIZE\ndrawableStartVector"
+        android:text="TextViewRichDrawable: VECTOR\ndrawableStartVector"
         app:drawableStartVector="@drawable/ic_android_black_24dp" />
 
     <com.tolstykh.textviewrichdrawable.TextViewRichDrawable
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="@dimen/space_medium"
-        android:text="TextViewRichDrawable: VECTOR WITH SIZE\ndrawableEndVector[24dp;24dp]"
-        app:compoundDrawableHeight="24dp"
-        app:compoundDrawableWidth="24dp"
-        app:drawableEndVector="@drawable/ic_arrow_drop_down_circle_black_32dp" />
+        android:text="TextViewRichDrawable: VECTOR WITH SIZE\ndrawableEndVector[36dp;36dp]"
+        app:compoundDrawableHeight="36dp"
+        app:compoundDrawableWidth="36dp"
+        app:drawableStartVector="@drawable/ic_android_black_24dp"/>
 
     <com.tolstykh.textviewrichdrawable.TextViewRichDrawable
         android:layout_width="wrap_content"
