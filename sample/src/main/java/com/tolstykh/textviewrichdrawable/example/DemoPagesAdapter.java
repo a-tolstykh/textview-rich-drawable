@@ -1,17 +1,17 @@
 package com.tolstykh.textviewrichdrawable.example;
 
 import android.content.Context;
-import android.support.v4.view.PagerAdapter;
-import android.view.LayoutInflater;
-import android.view.View;
-import android.view.ViewGroup;
+import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentManager;
+import android.support.v4.app.FragmentPagerAdapter;
 
-public class DemoPagesAdapter extends PagerAdapter {
+public class DemoPagesAdapter extends FragmentPagerAdapter {
 
     private final DemoPage[] mDemoPages;
     private final Context mContext;
 
-    public DemoPagesAdapter(Context context, DemoPage[] demoPages) {
+    public DemoPagesAdapter(Context context, FragmentManager fragmentManager, DemoPage[] demoPages) {
+        super(fragmentManager);
         mContext = context;
         mDemoPages = demoPages;
     }
@@ -22,22 +22,9 @@ public class DemoPagesAdapter extends PagerAdapter {
     }
 
     @Override
-    public Object instantiateItem(ViewGroup collection, int position) {
+    public Fragment getItem(int position) {
         DemoPage demoPage = mDemoPages[position];
-        LayoutInflater inflater = LayoutInflater.from(mContext);
-        ViewGroup layout = (ViewGroup) inflater.inflate(demoPage.getLayoutId(), collection, false);
-        collection.addView(layout);
-        return layout;
-    }
-
-    @Override
-    public void destroyItem(ViewGroup collection, int position, Object view) {
-        collection.removeView((View) view);
-    }
-
-    @Override
-    public boolean isViewFromObject(View view, Object object) {
-        return view == object;
+        return demoPage.instantiateFragment();
     }
 
     @Override

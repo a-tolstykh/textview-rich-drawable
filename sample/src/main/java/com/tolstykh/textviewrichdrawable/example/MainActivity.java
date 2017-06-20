@@ -28,7 +28,7 @@ public class MainActivity extends AppCompatActivity {
 
     private void initViews() {
         DemoPage[] demoPages = DemoPage.values();
-        mPager.setAdapter(new DemoPagesAdapter(this, demoPages));
+        mPager.setAdapter(new DemoPagesAdapter(this, getSupportFragmentManager(), demoPages));
         mTabLayout.setupWithViewPager(mPager);
     }
 }
