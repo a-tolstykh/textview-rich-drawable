@@ -1,6 +1,7 @@
 package com.tolstykh.textviewrichdrawable;
 
 import android.content.Context;
+import android.support.annotation.DrawableRes;
 import android.support.v7.widget.AppCompatCheckBox;
 import android.util.AttributeSet;
 
@@ -44,5 +45,29 @@ public class CheckBoxRichDrawable extends AppCompatCheckBox implements DrawableE
     @Override
     public int getCompoundDrawableWidth() {
         return mRichDrawableHelper.getCompoundDrawableWidth();
+    }
+
+    @Override
+    public void setDrawableStartVectorId(@DrawableRes int id) {
+        mRichDrawableHelper.setDrawableStartVectorId(id);
+        mRichDrawableHelper.apply(this);
+    }
+
+    @Override
+    public void setDrawableEndVectorId(@DrawableRes int id) {
+        mRichDrawableHelper.setDrawableEndVectorId(id);
+        mRichDrawableHelper.apply(this);
+    }
+
+    @Override
+    public void setDrawablTopVectorId(@DrawableRes int id) {
+        mRichDrawableHelper.setDrawablTopVectorId(id);
+        mRichDrawableHelper.apply(this);
+    }
+
+    @Override
+    public void setDrawableBottomVectorId(@DrawableRes int id) {
+        mRichDrawableHelper.setDrawablTopVectorId(id);
+        mRichDrawableHelper.apply(this);
     }
 }

@@ -1,6 +1,7 @@
 package com.tolstykh.textviewrichdrawable;
 
 import android.content.Context;
+import android.support.annotation.DrawableRes;
 import android.support.v7.widget.AppCompatTextView;
 import android.util.AttributeSet;
 
@@ -45,4 +46,29 @@ public class TextViewRichDrawable extends AppCompatTextView implements DrawableE
     public int getCompoundDrawableWidth() {
         return mRichDrawableHelper.getCompoundDrawableWidth();
     }
+
+    @Override
+    public void setDrawableStartVectorId(@DrawableRes int id) {
+        mRichDrawableHelper.setDrawableStartVectorId(id);
+        mRichDrawableHelper.apply(this);
+    }
+
+    @Override
+    public void setDrawableEndVectorId(@DrawableRes int id) {
+        mRichDrawableHelper.setDrawableEndVectorId(id);
+        mRichDrawableHelper.apply(this);
+    }
+
+    @Override
+    public void setDrawablTopVectorId(@DrawableRes int id) {
+        mRichDrawableHelper.setDrawablTopVectorId(id);
+        mRichDrawableHelper.apply(this);
+    }
+
+    @Override
+    public void setDrawableBottomVectorId(@DrawableRes int id) {
+        mRichDrawableHelper.setDrawableBottomVectorId(id);
+        mRichDrawableHelper.apply(this);
+    }
+
 }
