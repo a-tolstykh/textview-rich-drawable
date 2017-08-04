@@ -1,5 +1,7 @@
 package com.tolstykh.textviewrichdrawable;
 
+import android.support.annotation.DrawableRes;
+
 public interface DrawableEnriched {
 
     int UNDEFINED = -1;
@@ -17,4 +19,13 @@ public interface DrawableEnriched {
      * @return the width in pixels or {@value UNDEFINED} if undefined.
      */
     int getCompoundDrawableWidth();
+
+    void setDrawableStartVectorId(@DrawableRes int id);
+
+    void setDrawableEndVectorId(@DrawableRes int id);
+
+    void setDrawablTopVectorId(@DrawableRes int id);
+
+    void setDrawableBottomVectorId(@DrawableRes int id);
+
 }

@@ -65,7 +65,7 @@ public class RichDrawableHelper implements DrawableEnriched {
                                        int drawableEndVectorId, int drawableBottomVectorId) {
         Drawable[] drawables = textView.getCompoundDrawables();
 
-        inflateVectors(textView, drawableStartVectorId, drawableTopVectorId, drawableEndVectorId, 
+        inflateVectors(textView, drawableStartVectorId, drawableTopVectorId, drawableEndVectorId,
                 drawableBottomVectorId, drawables);
         scale(drawables);
         tint(drawables);
@@ -169,5 +169,26 @@ public class RichDrawableHelper implements DrawableEnriched {
      */
     public int getCompoundDrawableWidth() {
         return mDrawableWidth;
+    }
+
+
+    @Override
+    public void setDrawableStartVectorId(@DrawableRes int id) {
+        mDrawableStartVectorId = id;
+    }
+
+    @Override
+    public void setDrawableEndVectorId(@DrawableRes int id) {
+        mDrawableEndVectorId = id;
+    }
+
+    @Override
+    public void setDrawablTopVectorId(@DrawableRes int id) {
+        mDrawableTopVectorId = id;
+    }
+
+    @Override
+    public void setDrawableBottomVectorId(@DrawableRes int id) {
+        mDrawableBottomVectorId = id;
     }
 }
