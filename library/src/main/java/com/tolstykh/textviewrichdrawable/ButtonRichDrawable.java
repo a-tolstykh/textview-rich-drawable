@@ -60,8 +60,8 @@ public class ButtonRichDrawable extends AppCompatButton implements DrawableEnric
     }
 
     @Override
-    public void setDrawablTopVectorId(@DrawableRes int id) {
-        mRichDrawableHelper.setDrawablTopVectorId(id);
+    public void setDrawableTopVectorId(@DrawableRes int id) {
+        mRichDrawableHelper.setDrawableTopVectorId(id);
         mRichDrawableHelper.apply(this);
     }
 
@@ -70,5 +70,4 @@ public class ButtonRichDrawable extends AppCompatButton implements DrawableEnric
         mRichDrawableHelper.setDrawableBottomVectorId(id);
         mRichDrawableHelper.apply(this);
     }
-
 }

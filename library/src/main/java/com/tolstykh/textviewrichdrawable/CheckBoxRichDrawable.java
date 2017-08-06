@@ -60,14 +60,14 @@ public class CheckBoxRichDrawable extends AppCompatCheckBox implements DrawableE
     }
 
     @Override
-    public void setDrawablTopVectorId(@DrawableRes int id) {
-        mRichDrawableHelper.setDrawablTopVectorId(id);
+    public void setDrawableTopVectorId(@DrawableRes int id) {
+        mRichDrawableHelper.setDrawableTopVectorId(id);
         mRichDrawableHelper.apply(this);
     }
 
     @Override
     public void setDrawableBottomVectorId(@DrawableRes int id) {
-        mRichDrawableHelper.setDrawablTopVectorId(id);
+        mRichDrawableHelper.setDrawableTopVectorId(id);
         mRichDrawableHelper.apply(this);
     }
 }

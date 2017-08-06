@@ -60,8 +60,8 @@ public class RadioButtonRichDrawable extends AppCompatRadioButton implements Dra
     }
 
     @Override
-    public void setDrawablTopVectorId(@DrawableRes int id) {
-        mRichDrawableHelper.setDrawablTopVectorId(id);
+    public void setDrawableTopVectorId(@DrawableRes int id) {
+        mRichDrawableHelper.setDrawableTopVectorId(id);
         mRichDrawableHelper.apply(this);
     }
 

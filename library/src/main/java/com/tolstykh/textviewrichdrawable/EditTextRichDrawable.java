@@ -50,21 +50,24 @@ public class EditTextRichDrawable extends AppCompatEditText implements DrawableE
     @Override
     public void setDrawableStartVectorId(@DrawableRes int id) {
         mRichDrawableHelper.setDrawableStartVectorId(id);
+        mRichDrawableHelper.apply(this);
     }
 
     @Override
     public void setDrawableEndVectorId(@DrawableRes int id) {
         mRichDrawableHelper.setDrawableEndVectorId(id);
+        mRichDrawableHelper.apply(this);
     }
 
     @Override
-    public void setDrawablTopVectorId(@DrawableRes int id) {
-        mRichDrawableHelper.setDrawablTopVectorId(id);
+    public void setDrawableTopVectorId(@DrawableRes int id) {
+        mRichDrawableHelper.setDrawableTopVectorId(id);
+        mRichDrawableHelper.apply(this);
     }
 
     @Override
     public void setDrawableBottomVectorId(@DrawableRes int id) {
         mRichDrawableHelper.setDrawableBottomVectorId(id);
+        mRichDrawableHelper.apply(this);
     }
-
 }

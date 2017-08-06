@@ -24,8 +24,7 @@ public interface DrawableEnriched {
 
     void setDrawableEndVectorId(@DrawableRes int id);
 
-    void setDrawablTopVectorId(@DrawableRes int id);
+    void setDrawableTopVectorId(@DrawableRes int id);
 
     void setDrawableBottomVectorId(@DrawableRes int id);
-
 }

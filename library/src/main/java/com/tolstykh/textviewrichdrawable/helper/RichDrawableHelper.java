@@ -183,7 +183,7 @@ public class RichDrawableHelper implements DrawableEnriched {
     }
 
     @Override
-    public void setDrawablTopVectorId(@DrawableRes int id) {
+    public void setDrawableTopVectorId(@DrawableRes int id) {
         mDrawableTopVectorId = id;
     }
 
