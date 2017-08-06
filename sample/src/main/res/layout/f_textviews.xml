@@ -62,13 +62,13 @@
             app:drawableStartVector="@drawable/ic_android_black_24dp"/>
 
         <com.tolstykh.textviewrichdrawable.TextViewRichDrawable
+            android:id="@+id/text_set_programmatically"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/space_medium"
             android:text="TextViewRichDrawable: VECTOR WITH SIZE\ndrawableEndVector[36dp;36dp]"
             app:compoundDrawableHeight="36dp"
-            app:compoundDrawableWidth="36dp"
-            app:drawableStartVector="@drawable/ic_android_black_24dp"/>
+            app:compoundDrawableWidth="36dp"/>
 
         <com.tolstykh.textviewrichdrawable.TextViewRichDrawable
             android:layout_width="wrap_content"

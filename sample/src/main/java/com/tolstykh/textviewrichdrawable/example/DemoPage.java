@@ -9,13 +9,13 @@ enum DemoPage {
     TEXT_VIEWS(R.string.title_text_views_demo) {
         @Override
         Fragment instantiateFragment() {
-            return DemoFragment.newInstance(R.layout.f_textviews);
+            return TextViewsFragment.newInstance();
         }
     },
     ALL_CONTROLS(R.string.title_all_controls_demo) {
         @Override
         Fragment instantiateFragment() {
-            return DemoFragment.newInstance(R.layout.f_controls_all);
+            return SimpleFragment.newInstance(R.layout.f_controls_all);
         }
     };
 
