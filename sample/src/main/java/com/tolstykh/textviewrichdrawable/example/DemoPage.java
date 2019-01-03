@@ -17,6 +17,12 @@ enum DemoPage {
         Fragment instantiateFragment() {
             return SimpleFragment.newInstance(R.layout.f_controls_all);
         }
+    },
+    RUNTIME_CHANGE(R.string.title_runtime_change) {
+        @Override
+        Fragment instantiateFragment() {
+            return new ChangeRuntimeFragment();
+        }
     };
 
     @StringRes
