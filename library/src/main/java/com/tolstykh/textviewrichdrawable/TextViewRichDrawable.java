@@ -1,7 +1,9 @@
 package com.tolstykh.textviewrichdrawable;
 
 import android.content.Context;
+import android.graphics.drawable.Drawable;
 import android.support.annotation.DrawableRes;
+import android.support.annotation.Nullable;
 import android.support.v7.widget.AppCompatTextView;
 import android.util.AttributeSet;
 
@@ -69,5 +71,31 @@ public class TextViewRichDrawable extends AppCompatTextView implements DrawableE
     public void setDrawableBottomVectorId(@DrawableRes int id) {
         mRichDrawableHelper.setDrawableBottomVectorId(id);
         mRichDrawableHelper.apply(this);
+    }
+
+
+    public void setDrawables(@Nullable Drawable left, @Nullable Drawable top, @Nullable Drawable right, @Nullable Drawable bottom) {
+        super.setCompoundDrawables(left, top, right, bottom);
+        mRichDrawableHelper.apply(this);
+    }
+
+    public void setLeftDrawable(@Nullable Drawable left) {
+        Drawable[] compoundDrawables = getCompoundDrawables();
+        setDrawables(left, compoundDrawables[1], compoundDrawables[2], compoundDrawables[3]);
+    }
+
+    public void setRightDrawable(@Nullable Drawable right) {
+        Drawable[] compoundDrawables = getCompoundDrawables();
+        setDrawables(compoundDrawables[0], compoundDrawables[1], right, compoundDrawables[3]);
+    }
+
+    public void setTopDrawable(@Nullable Drawable top) {
+        Drawable[] compoundDrawables = getCompoundDrawables();
+        setDrawables(compoundDrawables[0], top, compoundDrawables[2], compoundDrawables[3]);
+    }
+
+    public void setBottomDrawable(@Nullable Drawable bottom) {
+        Drawable[] compoundDrawables = getCompoundDrawables();
+        setDrawables(compoundDrawables[0], compoundDrawables[1], compoundDrawables[2], bottom);
     }
 }

@@ -8,7 +8,6 @@ ext {
 
 android {
     compileSdkVersion rootProject.compileSdkVersion
-    buildToolsVersion rootProject.buildToolsVersion
 
     defaultConfig {
         minSdkVersion rootProject.minSdkVersion
@@ -25,7 +24,7 @@ android {
 }
 
 dependencies {
-    compile "com.android.support:appcompat-v7:$rootProject.supportVersion"
+    api "com.android.support:appcompat-v7:$rootProject.supportVersion"
 }
 
 // to generate release build use './gradlew clean build generateRelease'
