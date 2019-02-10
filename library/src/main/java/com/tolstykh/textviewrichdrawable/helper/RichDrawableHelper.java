@@ -153,8 +153,8 @@ public class RichDrawableHelper implements DrawableEnriched {
         }
     }
 
-    private VectorDrawableCompat getVectorDrawable(@DrawableRes int resId) {
-        return VectorDrawableCompat.create(mContext.getResources(), resId, mContext.getTheme());
+    private Drawable getVectorDrawable(@DrawableRes int resId) {
+        return ResourcesCompat.getDrawable(mContext.getResources(), resId, mContext.getTheme());
     }
 
     /**
