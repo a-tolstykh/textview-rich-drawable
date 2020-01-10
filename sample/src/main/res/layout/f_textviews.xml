@@ -76,6 +76,6 @@
             android:layout_marginTop="@dimen/space_medium"
             android:text="TextViewRichDrawable: VECTOR WITH TINT\ndrawableStartVector"
             app:drawableStartVector="@drawable/ic_android_black_24dp"
-            app:drawableTint="@color/colorAccent"/>
+            app:richDrawableTint="@color/colorAccent"/>
     </LinearLayout>
 </ScrollView>
