@@ -25,7 +25,7 @@ android {
 }
 
 dependencies {
-    compile "com.android.support:appcompat-v7:$rootProject.supportVersion"
+    implementation "androidx.appcompat:appcompat:$rootProject.appcompatVersion"
 }
 
 // to generate release build use './gradlew clean build generateRelease'
