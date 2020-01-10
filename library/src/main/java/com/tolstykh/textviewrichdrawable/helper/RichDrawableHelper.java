@@ -47,7 +47,7 @@ public class RichDrawableHelper implements DrawableEnriched {
             mDrawableTopVectorId = array.getResourceId(R.styleable.TextViewRichDrawable_drawableTopVector, UNDEFINED);
             mDrawableEndVectorId = array.getResourceId(R.styleable.TextViewRichDrawable_drawableEndVector, UNDEFINED);
             mDrawableBottomVectorId = array.getResourceId(R.styleable.TextViewRichDrawable_drawableBottomVector, UNDEFINED);
-            mDrawableTint = array.getColor(R.styleable.TextViewRichDrawable_drawableTint, UNDEFINED);
+            mDrawableTint = array.getColor(R.styleable.TextViewRichDrawable_richDrawableTint, UNDEFINED);
         } finally {
             array.recycle();
         }

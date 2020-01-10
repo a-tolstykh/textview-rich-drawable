@@ -33,7 +33,7 @@ This library is just an extension of Android's TextView.
         app:compoundDrawableWidth="24dp"
         app:drawableTopVector="@drawable/some_vector_drawble"
         app:drawableEndVector="@drawable/another_vector_drawable"
-        app:drawableTint="@color/colorAccent" />
+        app:richDrawableTint="@color/colorAccent" />
 ```        
 
 * All customizable attributes:
@@ -46,7 +46,7 @@ This library is just an extension of Android's TextView.
         <attr name="drawableTopVector" format="reference" />
         <attr name="drawableEndVector" format="reference" />
         <attr name="drawableBottomVector" format="reference" />
-        <attr name="drawableTint" format="reference" />
+        <attr name="richDrawableTint" format="reference" />
     </declare-styleable>
 ```
 

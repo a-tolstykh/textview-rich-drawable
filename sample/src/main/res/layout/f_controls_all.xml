@@ -23,7 +23,7 @@
             android:layout_marginTop="@dimen/space_medium"
             android:text="TextViewRichDrawable: VECTOR WITH TINT\ndrawableStartVector"
             app:drawableEndVector="@drawable/ic_android_black_24dp"
-            app:drawableTint="@color/colorAccent"/>
+            app:richDrawableTint="@color/colorAccent"/>
 
         <com.tolstykh.textviewrichdrawable.ButtonRichDrawable
             android:layout_width="wrap_content"
@@ -31,7 +31,7 @@
             android:layout_marginTop="@dimen/space_medium"
             android:text="Button"
             app:drawableEndVector="@drawable/ic_android_black_24dp"
-            app:drawableTint="@color/colorAccent"/>
+            app:richDrawableTint="@color/colorAccent"/>
 
         <com.tolstykh.textviewrichdrawable.CheckBoxRichDrawable
             android:layout_width="wrap_content"
@@ -39,7 +39,7 @@
             android:layout_marginTop="@dimen/space_medium"
             android:text="CheckBox"
             app:drawableEndVector="@drawable/ic_android_black_24dp"
-            app:drawableTint="@color/colorAccent"/>
+            app:richDrawableTint="@color/colorAccent"/>
 
         <com.tolstykh.textviewrichdrawable.EditTextRichDrawable
             android:layout_width="wrap_content"
@@ -47,7 +47,7 @@
             android:layout_marginTop="@dimen/space_medium"
             android:hint="EditText"
             app:drawableEndVector="@drawable/ic_android_black_24dp"
-            app:drawableTint="@color/colorAccent"/>
+            app:richDrawableTint="@color/colorAccent"/>
 
         <RadioGroup
             android:layout_width="match_parent"
@@ -60,7 +60,7 @@
                 android:layout_marginTop="@dimen/space_medium"
                 android:text="RadioButton #1"
                 app:drawableEndVector="@drawable/ic_android_black_24dp"
-                app:drawableTint="@color/colorAccent"/>
+                app:richDrawableTint="@color/colorAccent"/>
 
             <com.tolstykh.textviewrichdrawable.RadioButtonRichDrawable
                 android:layout_width="wrap_content"
@@ -68,7 +68,7 @@
                 android:layout_marginTop="@dimen/space_medium"
                 android:text="RadioButton #2"
                 app:drawableEndVector="@drawable/ic_android_black_24dp"
-                app:drawableTint="@color/colorAccent"/>
+                app:richDrawableTint="@color/colorAccent"/>
         </RadioGroup>
     </LinearLayout>
 </ScrollView>
